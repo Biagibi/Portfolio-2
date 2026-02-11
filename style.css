@@ -1,0 +1,227 @@
+/* GLOBAL */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+
+body {
+  background: #0d0d0d;
+  color: #c6cccc;
+}
+
+/* HEADER */
+header {
+  display: flex;
+  justify-content: center;
+  padding: 15px 10%;
+  background-image: url('imagens/fundo-menu.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #c6cccc;
+  transition: 0.3s;
+  font-weight: 600;
+}
+
+nav a:hover {
+  color: #355654;
+}
+
+/* HERO */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 80px 10%;
+  flex-wrap: wrap;
+}
+
+.hero-text h1 {
+  font-weight: 700;
+  letter-spacing: 2px;
+  line-height: 1.2;
+}
+
+.hero-text h1 .hello {
+  font-size: 80px;       /* aumenta o HELLO! */
+  color: #6e9fa0;        /* cor desejada */
+}
+
+.hero-text h1 .nome {
+  font-size: 65px;       /* tamanho do EU SOU A BEATRIZ */
+  color: #492153;        /* cor desejada */
+}
+
+.hero-text h2 {
+  margin-top: 10px;
+  font-family: 'Source Serif 4', serif; /* letra mais fina */
+  font-weight: 400;
+  font-size: 18px;
+  color: #F5D5E0; /* cor anterior do h2 */
+}
+
+.hero-text .hero-paragraph {
+  margin-top: 20px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #c6cccc; /* nova cor do texto */
+  font-family: 'Open Sans', sans-serif; /* manter legível */
+  max-width: 600px; /* respeitando a imagem */
+}
+
+.hero-img img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #492153;
+  box-shadow: 0 0 15px #572963a1;
+  transition: 0.4s;
+}
+
+.hero-img img:hover {
+  transform: scale(1.05);
+}
+
+/* SKILLS */
+.skills {
+  text-align: center;
+  padding: 80px 10%;
+}
+
+.skills h2 {
+  color: #492153;
+}
+
+.skill-container {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-top: 50px;
+  flex-wrap: wrap;
+}
+
+.circle {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  background: conic-gradient(#355654 0%, #1a2527 0%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.circle span {
+  position: relative;
+  font-weight: bold;
+  font-size: 18px;
+  color: #080409;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2cm;
+  height: 2cm;
+  margin: 0 auto;
+}
+
+/* CONTATO */
+.contato {
+  padding: 80px 10%;
+  text-align: center;
+}
+
+.contato h2 {
+  color: #492153;
+}
+
+.contato-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+.card-contato,
+.info-contato {
+  background-image: url('imagens/fundo-menu.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 30px;
+  border-radius: 10px;
+  width: 280px;
+  transition: 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.card-contato:hover,
+.info-contato:hover {
+  border: 1px solid #492153;
+  transform: translateY(-5px);
+}
+
+.card-contato img {
+  margin: 15px 0;
+}
+
+/* RESPONSIVO */
+@media (max-width: 992px) {
+
+  .hero {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .hero-text h1 {
+    font-size: 38px;
+    
+  }
+
+  .hero-text .hero-paragraph {
+    max-width: 90%;} /* ocupa quase toda a largura em telas pequenas */
+
+  .hero-img img {
+    width: 220px;
+    height: 220px;
+  }
+}
+
+
+/* **Prompt sugerido para retomar o projeto**
+
+ “Estou construindo meu portfólio em HTML, CSS e JS. Até agora temos:
+
+ * Estrutura principal: `index.html`, `style.css`, `script.js`, com uma pasta `imagens` para fotos, ícones e fundo.
+ * Seções: Hero com foto e apresentação, Skills com círculos animados, Contato com card e formulário.
+ * Alterações já feitas:
+
+>   * Hero: “HELLO!” maior e na cor #1a2527, “EU SOU A BEATRIZ.” na cor #492153, subtítulo “Desenvolvedora em formação” em Source Serif 4.
+>   * Adicionado parágrafo sobre formação e experiência abaixo do subtítulo, cor #c6cccc, responsivo.
+>   * Skills: círculos com porcentagens e imagens de fundo, animação ao passar o mouse, cores personalizáveis.
+>   * Contato: cards com fundo `fundo-menu.jpg`, informações de LinkedIn, Instagram e email.
+> * Ajustes de responsividade já aplicados para Hero, Skills e Contato.
+>
+> Quero continuar o projeto mantendo todas essas alterações. Preciso:
+>
+> 1. Orientações de como adicionar novas skills e imagens.
+> 2. Alterar cores do círculo e número.
+> 3. Garantir que tudo continue responsivo.
+> 4. Sugestões de melhorias de design ou otimização.
+>
+> Por favor, retome o projeto completo e me mostre a versão atualizada pronta para HTML, CSS e JS.” */
